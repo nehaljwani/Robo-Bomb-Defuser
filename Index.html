@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>ITWS2 FALL SPRING 2012 ASSIGNMENT 4</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="ITWS2 FALL SPRING 2012 ASSIGNMENT 4"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-03-28 21:16:17 IST"/>
+<meta name="author" content="Nehal J. Wani"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">ITWS2 FALL SPRING 2012 ASSIGNMENT 4</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Student Details:</a>
+<ul>
+<li><a href="#sec-1-1">1.1 Name: Nehal J. Wani</a></li>
+<li><a href="#sec-1-2">1.2 Roll No: 201125005</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Code Organization:</a></li>
+<li><a href="#sec-3">3 Class Decomposition:</a>
+<ul>
+<li><a href="#sec-3-1">3.1 My code has five classes ::</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1 Class1. curses_screen</a></li>
+<li><a href="#sec-3-1-2">3.1.2 Class2. curses_window</a></li>
+<li><a href="#sec-3-1-3">3.1.3 Class3. Gun</a></li>
+<li><a href="#sec-3-1-4">3.1.4 Class4. Robot</a></li>
+<li><a href="#sec-3-1-5">3.1.5 Class5. MyGame which inherits from curses_window</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Advantages:</a></li>
+<li><a href="#sec-5">5 Miscellaneous:</a></li>
+<li><a href="#sec-6">6 Extra Features:</a></li>
+<li><a href="#sec-7">7 ScreenShots:</a>
+<ul>
+<li><a href="#sec-7-1">7.1 Game in Level 2:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Student Details:</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Name: Nehal J. Wani</h3>
+<div class="outline-text-3" id="text-1-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Roll No: 201125005</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Code Organization:</h2>
+<div class="outline-text-2" id="text-2">
+
+<dl>
+<dt>The whole program is divided into 2 Parts</dt><dd>
+<p>
+       Part 1 contains the mail python code.
+       This contains the program which controls the flow.
+       Part 2 contains text files containing ascii art.
+       These contain images for add-on effect.
+</p></dd>
+</dl>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Class Decomposition:</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> My code has five classes ::</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+</div>
+
+<div id="outline-container-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> Class1. curses_screen</h4>
+<div class="outline-text-4" id="text-3-1-1">
+
+<ul>
+<li>Used for making a screen on which components of game can be displayed. Contains the methods __enter__ and __exit__ so that <code>with</code> keyword can be used to 
+    implement objects. Initializes a screen and returns with basic parameters.
+</li>
+</ul>
+
+
+
+
+<pre class="example">class curses_screen:
+      """ Creates A Screen """
+      def __enter__(self):
+              self.stdscr = curses.initscr()
+              curses.cbreak()
+              self.stdscr.clear()
+              curses.noecho()
+              self.stdscr.keypad(1)
+              self.stdscr.border(0)
+              return self.stdscr
+      def __exit__(self,a,b,c):
+              curses.echo()
+              curses.endwin()
+              self.stdscr.getch()
+              self.stdscr.clear()
+              self.stdscr.refresh()
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> Class2. curses_window</h4>
+<div class="outline-text-4" id="text-3-1-2">
+
+<ul>
+<li>Used for generating a window in which the arena is displayed. Just returns an initialized window.
+</li>
+</ul>
+
+
+
+
+<pre class="example">class curses_window:
+        """ Creates A Window """
+        def __init__(self):
+                curses.curs_set(0)
+                curses.noecho()
+                self.win=curses.newwin(LINES-4,COLS-4,2,2)
+                self.win.clear()
+                self.win.refresh()
+                self.win.keypad(1)
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3"><span class="section-number-4">3.1.3</span> Class3. Gun</h4>
+<div class="outline-text-4" id="text-3-1-3">
+
+<ul>
+<li>Used for putting guns [big and small] on the game arena.
+</li>
+</ul>
+
+<ul>
+<li id="sec-3-1-3-1">Method1: fire_small :: Calculate Position Of Small Bullet<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-3-2">Method2: getBullPos :: Firing Small Bullet<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-3-3">Method3: fire_big :: Calculate Position Of Big Bullet<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-3-4">Method4: clear :: Clear game window<br/>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-4" class="outline-4">
+<h4 id="sec-3-1-4"><span class="section-number-4">3.1.4</span> Class4. Robot</h4>
+<div class="outline-text-4" id="text-3-1-4">
+
+<ul>
+<li id="sec-3-1-4-1">Method1: place :: Place Robot @ Given Coordinates<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-4-2">Method2: move :: Move Robot @ Given Coordinates<br/>
+
+<ul>
+<li>Used for generating upto 10 types of different robots and perform operations such as move and place
+</li>
+</ul>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-5" class="outline-4">
+<h4 id="sec-3-1-5"><span class="section-number-4">3.1.5</span> Class5. MyGame which inherits from curses_window</h4>
+<div class="outline-text-4" id="text-3-1-5">
+
+<ul>
+<li>Used for starting the game as it contains the necessary components and methods for the game to run
+</li>
+</ul>
+
+<ul>
+<li id="sec-3-1-5-1">Method1: Pause :: Simple Pause<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-5-2">Method2: Display_Hash :: Display Animated Hash when bomb explodes<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-5-3">Method3: Display_Crash :: Display Flashing Effect when robot moves out of bounds<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-5-4">Method4: Start :: Heart of the program<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-5-5">Method5: End :: Ends the game<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-5-6">Method6: Loading :: Loading a particular level with ascii art<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-3-1-5-7">Method7: Display_Choice :: Display Choices When Robot Dies<br/>
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Advantages:</h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li>The design of classes makes the code short as objects have similar properties can be initialized with just one coommand
+</li>
+<li>The code is flexible enough for re-use for a different GUI or game with different logic as the code is fully documentated and is quite freindly
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Miscellaneous:</h2>
+<div class="outline-text-2" id="text-5">
+
+<dl>
+<dt>The Control Flow</dt><dd>
+<p>
+      First, the main screen is displayed and robots are selected. Out of 10 choices, a robot can be selected. Then the required screens are initialized for the game
+      Arena. Different elements accourding to level are put and animated accordingly.
+</p></dd>
+<dt>The Main Logic</dt><dd>
+<p>
+      The main logic resides in the Start Function of the The Class MyGame. It contains all the specifications of the control flow.
+</p></dd>
+</dl>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Extra Features:</h2>
+<div class="outline-text-2" id="text-6">
+
+<dl>
+<dt>The ASCII Art</dt><dd>
+<p>
+      ASCII ART has been added to improve the loks of the game
+</p></dd>
+<dt>Variuos Levels</dt><dd>
+<p>
+      The game contains 3 levels with increasing level of difficulty
+</p></dd>
+<dt>Guns &amp; Timeout</dt><dd>
+<p>
+      There are weapons which interfere the motion of the robot. The bomb has to defused within a specific time range which varies according to level
+</p></dd>
+</dl>
+
+
+
+
+
+<p>
+    Org mode documents are easily
+         translatable into HTML,
+         <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>
+         and pdf.  Org-mode also
+         works with mobiles like IPhone and Android.
+</p></div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> ScreenShots:</h2>
+<div class="outline-text-2" id="text-7">
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Game in Level 2:</h3>
+<div class="outline-text-3" id="text-7-1">
+
+<p>   <img src="./Screenshot-1.png" height="600" width="1000" alt="./Screenshot-1.png" />
+   <img src="./Screenshot-2.png" height="600" width="1000" alt="./Screenshot-2.png" />
+</p></div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-03-28 21:16:17 IST</p>
+<p class="author">Author: Nehal J. Wani</p>
+<p class="creator">Org version 7.8.03 with Emacs version 23</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
