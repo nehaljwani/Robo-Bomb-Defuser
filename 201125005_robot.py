@@ -421,5 +421,5 @@ while True:
 	if Exit_Status==2 or LEVEL==4: 
 		Game.End(Arena,Score,LEVEL,LINES,COLS)
 		break
-Game.win.clear() # Exiting Quitely!
+Game.win.clear() # Exiting Quietly!
 curses.endwin()
